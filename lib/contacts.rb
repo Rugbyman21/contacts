@@ -1,5 +1,5 @@
 class Contacts
-  attr_reader(:name, :street, :id, :city, :state, :zip)
+  attr_reader(:name, :street, :id, :city, :state, :zip, :phones)
 
   @@contacts = []
 
@@ -10,7 +10,8 @@ class Contacts
     @city = attributes.fetch(:city)
     @state = attributes.fetch(:state)
     @zip = attributes.fetch(:zip)
-    
+    @phones = []
+
   end
 
   define_method(:name) do
@@ -46,6 +47,10 @@ class Contacts
   define_method(:save) do
     @@contacts.push(self)
   end
+
+define_method(:add_phonebook) do |phonebook|
+  @phones.push(phonebook)
+end
 
   define_singleton_method(:clear) do
     @@contacts = []

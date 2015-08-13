@@ -82,12 +82,12 @@ require('phonebook')
       end
     end
 
-  #   describe('#phonebook') do
-  #     it("adds a person's number to the contactbook") do
-  #       test_contact = Contacts.new({:name => "Mary", :street => "1st street", :id => "1", :city => 'Portland', :state => 'Oregon', :zip => "11111"})
-  #       test_phonebook = Phonebook.new({:number => "1111111111", :type => "home", :id => "1"})
-  #       test_contact.phonebook(test_phonebook)
-  #       expect(test_contact.phonebook()).to(eq([test_phonebook]))
-  #     end
-  #   end
+    describe('#phonebook') do
+      it("adds a person's number to the contactbook") do
+        test_contact = Contacts.new({:name => "Mary", :street => "1st street", :id => "1", :city => 'Portland', :state => 'Oregon', :zip => "11111"})
+        test_phonebook = Phonebook.new({:number => "1111111111", :type => "home", :id => "1"})
+        test_contact.add_phonebook(test_phonebook)
+        expect(test_contact.phones()).to(eq([test_phonebook]))
+      end
+    end
  end
