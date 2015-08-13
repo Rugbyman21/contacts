@@ -10,11 +10,13 @@ class Contacts
     @city = attributes.fetch(:city)
     @state = attributes.fetch(:state)
     @zip = attributes.fetch(:zip)
+    
   end
 
   define_method(:name) do
     @name
   end
+
 
  define_method(:street) do
    @street
