@@ -1,6 +1,7 @@
 require('rspec')
 require('contacts')
 
+
   describe(Contacts) do
     before() do
       Contacts.clear()
