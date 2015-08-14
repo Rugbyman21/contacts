@@ -1,0 +1,10 @@
+<h3>Here are all the contact info in the Phonebook:</h3>
+
+<ul>
+  <% @contacts.phones().each() do |phones| %>
+    <li><a href="/phonebook/<%= phones.id() %>"><%= phones.name() %> <%= phones.street() %> <%= phones.city() %> <%= phones.state() %> <%= phones.zip() %></a></li>
+  <% end %>
+</ul>
+
+<a href="/contacts/<%= @contacts.id%>/phonebook/new">Add a new phonebook</a>
+<a href="/">Return to Main Page</a>

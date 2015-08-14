@@ -1,0 +1,16 @@
+<h1>Add a contact to <%= @contacts.name() %> </h1>
+
+<form action="/phonebook" method="post">
+  <input id='contacts_id' name='contacts_id' type='hidden' value='<%= @contacts.id() %>'>
+
+  <label for='name'>Phonebook name:</label>
+  <input id='name' name='name' type='text'>
+
+  <label for='street'>Phonebook street:</label>
+  <input id='street' name='street' type='text'>
+
+  <label for='city'>Phonebook city:</label>
+  <input id='city' name='city' type='text'>
+
+  <button type="submit">Add Phonebook</button>
+</form>
